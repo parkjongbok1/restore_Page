@@ -4,25 +4,22 @@ const ctx = $c.getContext("2d");
 
 // 메뉴 항목 배열과 각 메뉴 항목에 대한 배경 이미지 정보를 정의합니다.
 const product = [
-  { id: "product1", name: "떡볶이" },
-  { id: "product2", name: "돈가스" },
-  { id: "product3", name: "초밥" },
+  { id: "product1", name: "A" },
+  { id: "product2", name: "C" },
+  { id: "product3", name: "B" },
 ];
 const backUrl = [
   {
     url: "http://www.bdscast.co.kr/website01/web/index.html",
-    description: "부동산캐스트 홈페이지 1번 입니다.",
-    // url: "img/point01.png",
+    description: "홈페이지A 입장하시겠습니까?",
   },
   {
     url: "http://www.bdscast.co.kr/website03/web/index.html",
-    description: "부동산캐스트 홈페이지 3번 입니다.",
-    // url: "img/point02.png",
+    description: "홈페이지 C 입장하시겠습니까?",
   },
   {
     url: "http://www.bdscast.co.kr/website02/web/index.html",
-    description: "부동산캐스트 홈페이지 2번 입니다.",
-    // url: "img/point03.png",
+    description: "페이지 B 입장하시겠습니까?",
   },
 ];
 
@@ -116,7 +113,7 @@ const rotate = () => {
     setTimeout(() => {
       const imgInfo = backUrl[ran];
       const confirmation = confirm(
-        `오늘의 야식은?! ${product[ran].name} 어떠신가요?\n\n${imgInfo.description}`
+        `부동산캐스트 홈페이지 ${product[ran].name} 디자인 입니다.\n\n${imgInfo.description}`
       );
       if (confirmation) {
         openLink(imgInfo.url);
